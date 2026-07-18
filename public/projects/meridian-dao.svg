@@ -1,0 +1,29 @@
+<svg viewBox="0 0 600 450" xmlns="http://www.w3.org/2000/svg">
+  <rect x="1.5" y="1.5" width="597" height="447" rx="28" fill="#F3F0FF" />
+  <rect x="1.5" y="1.5" width="597" height="447" rx="28" fill="none" stroke="#0F172A" stroke-width="2.5" />
+
+  <circle cx="34" cy="34" r="6" fill="none" stroke="#0F172A" stroke-width="2.5" />
+  <circle cx="56" cy="34" r="6" fill="none" stroke="#0F172A" stroke-width="2.5" />
+  <circle cx="78" cy="34" r="6" fill="none" stroke="#0F172A" stroke-width="2.5" />
+
+  <rect x="48" y="70" width="504" height="64" rx="18" fill="#ffffff" stroke="#0F172A" stroke-width="2.5" />
+  <path d="M72 102 h150" stroke="#0F172A" stroke-width="3" stroke-linecap="round" />
+  <rect x="440" y="86" width="90" height="32" rx="16" fill="#B9C4FF" stroke="#0F172A" stroke-width="2" />
+
+  <rect x="48" y="152" width="504" height="88" rx="20" fill="#ffffff" stroke="#0F172A" stroke-width="2.5" />
+  <circle cx="84" cy="196" r="18" fill="none" stroke="#0F172A" stroke-width="2.5" />
+  <path d="M76 196 l6 6 l12 -13" stroke="#0F172A" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M120 182 h220" stroke="#0F172A" stroke-width="3" stroke-linecap="round" />
+  <path d="M120 202 h150" stroke="#94A3B8" stroke-width="3" stroke-linecap="round" />
+  <rect x="410" y="176" width="110" height="40" rx="14" fill="#B9C4FF" opacity="0.6" stroke="#0F172A" stroke-width="2" />
+  <text x="430" y="201" font-family="Arial, sans-serif" font-size="14" fill="#0F172A">62% Yes</text>
+
+  <rect x="48" y="256" width="504" height="88" rx="20" fill="#ffffff" stroke="#0F172A" stroke-width="2.5" />
+  <circle cx="84" cy="300" r="18" fill="none" stroke="#0F172A" stroke-width="2.5" stroke-dasharray="4 5" />
+  <path d="M120 286 h180" stroke="#0F172A" stroke-width="3" stroke-linecap="round" />
+  <path d="M120 306 h130" stroke="#94A3B8" stroke-width="3" stroke-linecap="round" />
+  <rect x="410" y="280" width="110" height="40" rx="14" fill="#EAF9FF" stroke="#0F172A" stroke-width="2" />
+  <text x="424" y="305" font-family="Arial, sans-serif" font-size="14" fill="#0F172A">Voting...</text>
+
+  <path d="M60 388 C 160 372, 260 400, 360 380 C 420 368, 480 384, 540 374" stroke="#0F172A" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.3" />
+</svg>
