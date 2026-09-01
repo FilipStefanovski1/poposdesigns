@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Fredoka, Inter, Caveat } from "next/font/google";
+import { Space_Grotesk, Inter } from "next/font/google";
+import Sidebar from "@/components/Sidebar";
+import MobileNav from "@/components/MobileNav";
 import "./globals.css";
 
-const fredoka = Fredoka({
+const spaceGrotesk = Space_Grotesk({
   variable: "--font-display-raw",
   subsets: ["latin"],
   weight: ["500", "600", "700"],
@@ -13,16 +15,10 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const caveat = Caveat({
-  variable: "--font-hand-raw",
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-});
-
 export const metadata: Metadata = {
-  title: "Popos Designs — Web3 Product Design",
+  title: "Popo.Designs | Graphic Designer | Visuals that stick.",
   description:
-    "I help Web3 teams build products that feel simple, polished, and memorable.",
+    "Independent graphic designer working across branding, sports design and campaigns. Skopje, available worldwide.",
 };
 
 export default function RootLayout({
@@ -33,10 +29,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fredoka.variable} ${inter.variable} ${caveat.variable} h-full`}
+      className={`${spaceGrotesk.variable} ${inter.variable} h-full`}
     >
-      <body className="min-h-full flex flex-col bg-canvas font-body text-navy antialiased">
-        {children}
+      <body className="min-h-full bg-canvas font-body text-navy antialiased">
+        <Sidebar />
+        <MobileNav />
+        <main className="lg:ml-[30%]">{children}</main>
       </body>
     </html>
   );
