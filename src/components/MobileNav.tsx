@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 
 const NAV_LINKS = [
@@ -12,7 +13,6 @@ const NAV_LINKS = [
 
 const SOCIAL_LINKS = [
   { label: "Instagram", href: "https://www.instagram.com/popodesignss/" },
-  { label: "Email", href: "mailto:hello@popo.designs" },
   { label: "LinkedIn", href: "https://linkedin.com" },
 ];
 
@@ -22,12 +22,11 @@ export default function MobileNav() {
   return (
     <div className="sticky top-0 z-40 border-b border-border bg-canvas lg:hidden">
       <div className="flex items-center justify-between px-6 py-5">
-        <Link
-          href="/"
-          onClick={() => setOpen(false)}
-          className="font-display text-base font-semibold tracking-tight text-navy"
-        >
-          Popo<span className="text-primary">.Designs</span>
+        <Link href="/" onClick={() => setOpen(false)} className="flex items-center gap-2">
+          <Image src="/logo-mark.png" alt="Popo.Designs" width={28} height={28} className="rounded-[6px]" />
+          <span className="font-display text-base font-semibold tracking-tight text-navy">
+            Popo<span className="text-primary">.Designs</span>
+          </span>
         </Link>
         <button
           type="button"

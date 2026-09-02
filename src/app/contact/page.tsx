@@ -6,7 +6,6 @@ export const metadata: Metadata = {
 };
 
 const LINKS = [
-  { label: "Email", value: "hello@popo.designs", href: "mailto:hello@popo.designs" },
   {
     label: "Instagram",
     value: "@popodesignss",
