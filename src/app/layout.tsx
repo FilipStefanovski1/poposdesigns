@@ -16,7 +16,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Popo.Designs | Graphic Designer | Visuals that stick.",
+  title: "Popo Designs | Graphic Designer | Visuals that stick.",
   description:
     "Independent graphic designer working across branding, sports design and campaigns. Skopje, available worldwide.",
 };

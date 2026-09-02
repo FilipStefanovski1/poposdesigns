@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About | Popo.Designs",
+  title: "About | Popo Designs",
   description:
     "Popo is an independent multidisciplinary graphic design practice working across branding, sports and campaigns.",
 };

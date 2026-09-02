@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: ProjectPageProps) {
   const project = getProjectBySlug(slug);
   if (!project) return {};
   return {
-    title: `${project.title} | Popo.Designs`,
+    title: `${project.title} | Popo Designs`,
     description: project.description,
   };
 }

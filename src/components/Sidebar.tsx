@@ -17,11 +17,11 @@ export default function Sidebar() {
     <aside className="hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-30 lg:flex lg:w-[30%] lg:flex-col lg:border-r lg:border-border lg:bg-canvas lg:px-12 lg:py-12 xl:px-14">
       <div className="flex flex-col gap-4">
         <Link href="/" className="flex items-center gap-3">
-          <Image src="/logo-mark.png" alt="Popo.Designs" width={36} height={36} className="rounded-[8px]" />
+          <Image src="/logo-mark.png" alt="Popo Designs" width={36} height={36} className="rounded-[8px]" />
           <span className="font-display text-lg font-semibold leading-none tracking-tight text-navy">
             Popo
             <br />
-            <span className="text-primary">.Designs</span>
+            <span className="text-primary">Designs</span>
           </span>
         </Link>
         <span className="text-xs font-semibold uppercase tracking-[0.1em] text-slate">

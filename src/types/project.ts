@@ -17,7 +17,6 @@ export interface ProjectAsset {
   image: string;
   alt: string;
   layout: AssetLayout;
-  archiveCategory: ArchiveCategory;
   /** Tiny uppercase label, e.g. "MATCHDAY", "FIXTURE ANNOUNCEMENT". */
   context?: string;
   /** Short descriptor, e.g. "MZT Skopje vs. Rabotnički". */
@@ -35,10 +34,12 @@ export interface Project {
   year: string;
   /** e.g. ["Sports Design", "Social Media", "Matchday Graphics"]. */
   categories: string[];
+  /** Used by the homepage archive filter. One project = one archive tile. */
+  archiveCategory: ArchiveCategory;
   /** Short, design-focused case-study intro. Not corporate copy. */
   description: string;
-  /** Primary image, used as this project's representative image where one is needed. */
+  /** Primary image. Used as the homepage archive tile and the opening visual on the case-study page. */
   cover: string;
-  /** The full case-study asset stream, in display order. First entry doubles as the opening visual. */
+  /** The full case-study asset stream, in display order. */
   assets: ProjectAsset[];
 }

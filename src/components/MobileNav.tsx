@@ -23,9 +23,9 @@ export default function MobileNav() {
     <div className="sticky top-0 z-40 border-b border-border bg-canvas lg:hidden">
       <div className="flex items-center justify-between px-6 py-5">
         <Link href="/" onClick={() => setOpen(false)} className="flex items-center gap-2">
-          <Image src="/logo-mark.png" alt="Popo.Designs" width={28} height={28} className="rounded-[6px]" />
+          <Image src="/logo-mark.png" alt="Popo Designs" width={28} height={28} className="rounded-[6px]" />
           <span className="font-display text-base font-semibold tracking-tight text-navy">
-            Popo<span className="text-primary">.Designs</span>
+            Popo <span className="text-primary">Designs</span>
           </span>
         </Link>
         <button

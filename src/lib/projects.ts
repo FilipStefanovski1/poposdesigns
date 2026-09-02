@@ -49,31 +49,19 @@ export interface ArchiveItem {
 }
 
 /**
- * Flattens every project's assets into one interleaved list for the
- * homepage archive. Round-robin across projects rather than grouped by
- * client, so the grid reads as a body of individual outputs.
+ * One tile per project for the homepage archive (its cover image), rather
+ * than one tile per individual asset. A project with many similar designs
+ * (e.g. MZT Skopje's matchday graphics) still gets a single entry here;
+ * the full set lives on its /work/[slug] case-study page.
  */
 export function getArchiveItems(): ArchiveItem[] {
-  const queues = projects.map((project) => ({ project, assets: [...project.assets] }));
-  const items: ArchiveItem[] = [];
-  let remaining = queues.reduce((sum, q) => sum + q.assets.length, 0);
-
-  while (remaining > 0) {
-    for (const queue of queues) {
-      const asset = queue.assets.shift();
-      if (!asset) continue;
-      items.push({
-        image: asset.image,
-        alt: asset.alt,
-        archiveCategory: asset.archiveCategory,
-        projectTitle: queue.project.title,
-        projectSlug: queue.project.slug,
-        projectCategory: queue.project.categories[0] ?? "",
-        year: queue.project.year,
-      });
-      remaining--;
-    }
-  }
-
-  return items;
+  return projects.map((project) => ({
+    image: project.cover,
+    alt: project.title,
+    archiveCategory: project.archiveCategory,
+    projectTitle: project.title,
+    projectSlug: project.slug,
+    projectCategory: project.categories[0] ?? "",
+    year: project.year,
+  }));
 }
