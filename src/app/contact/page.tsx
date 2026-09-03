@@ -11,7 +11,11 @@ const LINKS = [
     value: "@popodesignss",
     href: "https://www.instagram.com/popodesignss/",
   },
-  { label: "LinkedIn", value: "linkedin.com", href: "https://linkedin.com" },
+  {
+    label: "LinkedIn",
+    value: "marko-popovikj",
+    href: "https://www.linkedin.com/in/marko-popovikj-a6a631353/",
+  },
 ];
 
 export default function ContactPage() {

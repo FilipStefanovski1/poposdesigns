@@ -13,7 +13,7 @@ const NAV_LINKS = [
 
 const SOCIAL_LINKS = [
   { label: "Instagram", href: "https://www.instagram.com/popodesignss/" },
-  { label: "LinkedIn", href: "https://linkedin.com" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/marko-popovikj-a6a631353/" },
 ];
 
 export default function MobileNav() {
