@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 
 const NAV_LINKS = [
@@ -16,8 +17,14 @@ const SOCIAL_LINKS = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/marko-popovikj-a6a631353/" },
 ];
 
+function isActivePath(pathname: string, href: string) {
+  if (href === "/") return pathname === "/" || pathname.startsWith("/work/");
+  return pathname === href;
+}
+
 export default function MobileNav() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <div className="sticky top-0 z-40 border-b border-border bg-canvas lg:hidden">
@@ -53,16 +60,22 @@ export default function MobileNav() {
                 Graphic Designer | Visuals that stick.
               </span>
               <nav className="flex flex-col gap-6">
-                {NAV_LINKS.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setOpen(false)}
-                    className="font-display text-3xl font-semibold tracking-tight"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+                {NAV_LINKS.map((link) => {
+                  const active = isActivePath(pathname, link.href);
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setOpen(false)}
+                      aria-current={active ? "page" : undefined}
+                      className={`font-display text-3xl font-semibold tracking-tight ${
+                        active ? "text-primary" : ""
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  );
+                })}
               </nav>
             </div>
             <div className="flex flex-col gap-3">
