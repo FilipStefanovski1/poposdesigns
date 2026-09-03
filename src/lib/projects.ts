@@ -46,6 +46,8 @@ export interface ArchiveItem {
   projectSlug: string;
   projectCategory: string;
   year: string;
+  /** How many designs live inside this project's case study. */
+  assetCount: number;
 }
 
 /**
@@ -63,5 +65,6 @@ export function getArchiveItems(): ArchiveItem[] {
     projectSlug: project.slug,
     projectCategory: project.categories[0] ?? "",
     year: project.year,
+    assetCount: project.assets.length,
   }));
 }

@@ -45,21 +45,41 @@ export default function ArchiveGrid({ items }: { items: ArchiveItem[] }) {
           <Link
             key={`${item.projectSlug}-${index}`}
             href={`/work/${item.projectSlug}`}
-            className="group relative block aspect-[4/5] overflow-hidden bg-mist/40"
+            className="group relative block aspect-[4/5] overflow-hidden border border-border bg-mist/40 transition-colors duration-200 hover:border-primary"
           >
             <Image
               src={item.image}
               alt={item.alt}
               fill
               sizes="(min-width: 1024px) 23vw, (min-width: 640px) 46vw, 92vw"
-              className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.015]"
+              className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
             />
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/70 via-navy/0 to-navy/0 p-4 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-              <span className="block text-xs font-semibold uppercase tracking-[0.1em] text-white">
-                {item.projectTitle}
-              </span>
-              <span className="block text-[11px] uppercase tracking-[0.1em] text-white/70">
-                {item.projectCategory} · {item.year}
+
+            <span className="absolute right-3 top-3 flex items-center gap-1.5 rounded-full bg-navy/80 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.08em] text-white backdrop-blur-sm">
+              <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <rect x="1" y="3" width="8" height="8" rx="1" stroke="currentColor" strokeWidth="1.2" />
+                <path d="M3.5 3V1.75C3.5 1.34 3.84 1 4.25 1H10.25C10.66 1 11 1.34 11 1.75V7.75C11 8.16 10.66 8.5 10.25 8.5H9" stroke="currentColor" strokeWidth="1.2" />
+              </svg>
+              {item.assetCount} {item.assetCount === 1 ? "Design" : "Designs"}
+            </span>
+
+            <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 bg-gradient-to-t from-navy/90 via-navy/50 to-transparent p-4 pt-12">
+              <div>
+                <span className="block text-sm font-semibold text-white">{item.projectTitle}</span>
+                <span className="block text-[11px] uppercase tracking-[0.08em] text-white/70">
+                  {item.projectCategory} · {item.year}
+                </span>
+              </div>
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-white/50 text-white transition-transform duration-200 group-hover:translate-x-0.5 group-hover:border-white">
+                <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path
+                    d="M4 12L12 4M12 4H5M12 4V11"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
               </span>
             </div>
           </Link>
