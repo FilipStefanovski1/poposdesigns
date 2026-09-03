@@ -15,10 +15,27 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const title = "Popo Designs | Graphic Designer | Visuals that stick.";
+const description =
+  "Independent graphic designer working across branding, sports design and campaigns. Skopje, available worldwide.";
+
 export const metadata: Metadata = {
-  title: "Popo Designs | Graphic Designer | Visuals that stick.",
-  description:
-    "Independent graphic designer working across branding, sports design and campaigns. Skopje, available worldwide.",
+  metadataBase: new URL("https://www.popodesignss.art"),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: "https://www.popodesignss.art",
+    siteName: "Popo Designs",
+    images: ["/logo-mark.png"],
+  },
+  twitter: {
+    card: "summary",
+    title,
+    description,
+    images: ["/logo-mark.png"],
+  },
 };
 
 export default function RootLayout({
